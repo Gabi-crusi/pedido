@@ -1,0 +1,46 @@
+
+body {
+    height: fit-content;
+    background-color: #EEEEEE;
+}
+
+.botão {
+    padding: 10% 20px;
+    cursor: pointer;
+    background-color: #B0CFEE;
+    color: #155793;
+}
+
+.conteiner {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.imagem {
+    width: fit-content;
+    left: auto;
+    margin: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.pedido {
+    position: absolute;
+    top: 68%;
+    left: 42%;
+    color: #155793;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: all.5s;
+    color: #155793;
+    top: 70%;
+}

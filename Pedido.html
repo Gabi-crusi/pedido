@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <link rel="stylesheet" href="/css/pedido.css">
+</head>
+
+<body>
+    <div class="pedido">
+        <h1>Quer namorar comigo?</h1>
+    </div>
+    <div class="conteiner">
+        <button class="botão" id="botãosim">Sim</button>
+        <button class="botão" id="botãonão">Não</button>
+    </div>
+    <footer id="respostasim">
+    </footer>
+
+    <div class="imagem">
+        <img src="https://i.pinimg.com/564x/a4/c5/3e/a4c53ec6de8ff3e10009e3bb5301b611.jpg"
+            alt="Urcinho carinhos Azul deitado bravo">
+    </div>
+    <script>
+        const sim = window.document.getElementById("botãosim");
+        const nao = window.document.getElementById("botãonão"); 
+        const resp = window.document.getElementById("respostasim");
+
+        function moverBotao() {
+            var botao = nao;
+            var novoX = Math.random() * window.innerWidth;
+            var novoY = Math.random() * window.innerHeight;
+
+            botao.style.left = novoX + 'px';
+            botao.style.top = novoY + 'px';
+        }
+
+        let estado = -1;
+
+        function entrar() {
+            estado++;
+            if (estado === 0) {
+                sim.style.transform = "translate(50%)";
+                nao.style.transform = "translate(130px, -150px)";
+            }
+            if (estado == 1) {
+                nao.style.transform = "translate(130px, 150px)"; 
+            }
+            if (estado == 2) {
+                nao.style.transform = "translate(-325px, 150px)";
+            }
+            if (estado == 3) {
+                nao.style.transform = "translate(-325px, -150px)";
+            }
+            if (estado == 4) {
+                nao.style.transform = "translate(135px, 150px)";
+            }
+            if (estado == 5) {
+                nao.style.transform = "translate(135px, -150px)";
+            }
+            if (estado == 6) {
+                nao.style.transform = "translate(-325px, 150px)";
+            }
+            if (estado == 7) {
+                nao.style.transform = "translate(-325px, -150px)";
+                estado = -1;
+            }
+        }
+
+        nao.addEventListener("mouseenter", entrar);
+
+        sim.addEventListener("click", clicar);
+
+        function clicar() {
+            resp.innerHTML = "Eu te amo meu amor!!"; 
+            sim.style.transform = "translate(0px)";
+            nao.style.transform = "translate(0px, 0px)";
+
+            resp.style.opacity = 1;
+
+            setTimeout(function () {
+                resp.style.opacity = 0;
+            }, 3000);
+
+            moverBotao();
+        }
+    </script>
+
+</body>
+
+</html>
