@@ -4,14 +4,14 @@ body {
     background-color: #EEEEEE;
 }
 
-.botão {
+.botao {
     padding: 10% 20px;
     cursor: pointer;
     background-color: #B0CFEE;
     color: #155793;
 }
 
-.conteiner {
+.container {
     position: absolute;
     top: 80%;
     left: 50%;
